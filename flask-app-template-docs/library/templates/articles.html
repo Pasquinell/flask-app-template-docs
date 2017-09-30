@@ -1,0 +1,31 @@
+{% extends 'layout.html' %}
+
+
+{% block body %}
+
+	<h1> Articles </h1>
+	<br>
+	
+	<hr>
+
+	<table class = "table table-striped">
+		<tr>
+			<th> ID </th>
+			<th> Article Name </ht>
+			<th> Author </th>
+			<th> Date </ht>
+			<th> Valoration </th>
+		</tr>
+		{% for article in articles %}
+		<tr>
+			<td> {{article.id}} </td>
+			<td> <a href = /article/{{article.id}}>{{article.article_name}} </a></td>
+			<td> {{article.user_name}}</td>
+			<td> {{article.register_date}} </td>
+			<td> {{article.valoration}} </td>
+
+		</tr>
+		{% endfor %}
+	</table>
+		
+{% endblock	%}
